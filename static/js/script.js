@@ -24,3 +24,12 @@ function sendMessage() {
         document.getElementById("chat-box").scrollTop = document.getElementById("chat-box").scrollHeight;
     }
 }
+function openMenu() {
+    var menu = document.querySelector('.menu');
+    menu.style.display = 'flex';
+}
+
+function closeMenu() {
+    var menu = document.querySelector('.menu');
+    menu.style.display = 'none';
+}

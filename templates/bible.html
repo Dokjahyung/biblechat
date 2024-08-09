@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
+    <div class="menu-container">
+        <button class="menu-btn" onmouseover="openMenu()" onmouseout="closeMenu()">&#9776
+            <div class="menu" onmouseover="openMenu()" onmouseout="closeMenu()">
+                <a href="home.html"><p class="gradient-text">Home</p></a>
+                <a href="About.html"><p class="gradient-text">About</p></a>
+                <a href="projects.html"><p class="gradient-text">Projects</p></a>
+                <a href="projects.html"><p class="gradient-text">Contact</p></a>
+            </div>
+        </button>
+    </div>
+    
     <div class="container">
         <div class="sidebar">
             <!-- Image source updated to 'static/img' -->
