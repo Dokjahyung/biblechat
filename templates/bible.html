@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Chatbox</title>
+    <!-- Link to the CSS file stored in 'static/css' -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <!-- Image source updated to 'static/img' -->
+            <h3><img src="{{ url_for('static', filename='img/image-1.png') }}" style="width: 50%; position: relative; left: 25%; border-radius: 25%;"></h3>
+            <ul>
+                <li>Contact 1</li>
+                <li>Contact 2</li>
+                <li>Contact 3</li>
+                <li>Settings</li>
+            </ul>
+        </div>
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>Chat</h2>
+            </div>
+            <div class="chat-box" id="chat-box">
+                <div class="message received">Hello! How can I help you?</div>
+                <div class="message sent">I have a question about your services.</div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chat-input" placeholder="Type a message..." />
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+    <!-- Link to the JavaScript file stored in 'static/js' -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
