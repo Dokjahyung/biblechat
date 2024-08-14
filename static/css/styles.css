@@ -1,20 +1,27 @@
+
 body {
     font-family: Arial, sans-serif;
     background-color: #495057;
     display: flex;
+    flex-direction: column;
     justify-content: space-between; /* Align everything to the right */
     align-items: center;
     height: 100vh;
     margin: 0;
 }
 
-
+.big-container {
+    min-height: 120vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
 .menu-container {
-    top: -45%;
-    width: 15%;
-    margin: 0 1% 0 1%;
+    width: 5%;
+    margin: 2% 0 1% 2%;
     position: relative;
     float: right;
+    transition: width .3s;;
     /*z-index: 1000;*/
 }
 
@@ -25,7 +32,7 @@ body {
     color: white;
     font-size: 25px;
     transition: width 0.3s, background-color 0.3s;
-    width: 25%;
+    width: 50%;
     border-radius: 10px;
     /*text-align: center;*/
 }
@@ -40,12 +47,11 @@ body {
     display: none; /* Hidden by default */
     flex-direction: column;
     position: absolute;
-    top: 100%; 
-    left: -.19%;
-    padding: 10px;
+    margin-left: 0;
+    padding: 4%;
     background-color: white;
     border-radius: 0 0 15px 15px;
-    width: 65.75%;
+    width: 60%;
 }
 
 .menu a {
@@ -70,16 +76,17 @@ body {
 .container {
     display: flex;
     float: right;
-    width: 85%;
-    height: 85%;
+    width: 100%;
+    height: 90vh;
     margin-right: 1%;
+    margin-top: 1%;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
 
 .sidebar {
-    width: 10%;
+    width: 15%;
     background-color: #343a40;
     color: #fff;
     padding: 15px;
@@ -98,6 +105,7 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    justify-content: center;
 }
 
 .sidebar ul li {
@@ -105,6 +113,7 @@ body {
     padding: 10px;
     background-color: #495057;
     border-radius: 4px;
+    text-align: center;
     cursor: pointer;
 }
 
@@ -141,7 +150,7 @@ body {
 .message {
     padding: 10px;
     margin-bottom: 10px;
-    border-radius: 2%;
+    border-radius: 10px;
     max-width: 60%;
     word-wrap: break-word;
 }
@@ -195,5 +204,18 @@ body {
 .chat-input button:hover {
     background-color: #343a40;
     color: #fff;
+}
+
+.button{
+    background-color: #495057;
+    text-align: center;
+    width: 50%;
+    right: 0;
+}
+
+.convo {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
