@@ -11,19 +11,35 @@ document.getElementById("chat-input").addEventListener("keypress", function(even
 function sendMessage() {
     const chatInput = document.getElementById("chat-input");
     const messageText = chatInput.value.trim();
+
     if (messageText !== "") {
+        // Create the message element and append it to the chat box
         const messageElement = document.createElement("div");
         messageElement.classList.add("message", "sent");
         messageElement.innerText = messageText;
-
         document.getElementById("chat-box").appendChild(messageElement);
+
+        fetch('/ChatLog', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(messageText)
+        })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+    }
+
+        // Clear the input field and refocus
         chatInput.value = "";
         chatInput.focus();
 
         // Scroll to the bottom of the chat box
         document.getElementById("chat-box").scrollTop = document.getElementById("chat-box").scrollHeight;
-    }
 }
+
+
 
 function alertConvo() {
     return new Promise((resolve, reject) => {
