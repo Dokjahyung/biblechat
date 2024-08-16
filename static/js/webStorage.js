@@ -7,4 +7,4 @@ if (typeof(Storage) !== "undefined") {
   } else {
     console.error("Sorry, your browser does not support Web Storage...");
   }
-  
+
