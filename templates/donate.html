@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Chatbox</title>
+    <!-- Link to the CSS file stored in 'static/css' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+</head>
+<body class = "default-body">
+    <div class = "big-container" style = "background-image: url({{ url_for('static', filename='img/blur.jpg') }}); background-size: cover; background-repeat: no-repeat; background-position: center; ">
+        <div class="menu-container">
+            <button class="menu-btn" onmouseover="openMenu()" onmouseout="closeMenu()">&#9776
+                    <div class="menu" onmouseover="openMenu()" onmouseout="closeMenu()">
+                        <a href="/"><p class="gradient-text">Home</p></a>
+                        <a href="about.html"><p class="gradient-text">About</p></a>
+                        <a href="donate.html"><p class="gradient-text">Donate</p></a>
+                        <a href="projects.html"><p class="gradient-text">Contact</p></a>
+                    </div>
+                </button>
+        </div>
+        <div class = "container" style = "flex-direction: row; box-shadow: none; padding: 5% 0 0 0;">
+
+            <div class = "container" style = "height: 85%; width: 30%; flex-direction: column; margin-left: 5%; background-color: #E0C9A6; padding: 10px 0 10px 10px; border-radius: 10px 0 0 10px;">
+                <div class = "container" style = "padding: 10%; flex-direction: column; height: 95%; background-color: white; width: 80%; border-radius: 10px 0 0 10px; overflow: hidden;">
+                    <p class = "raleway-title">About Us</p>
+                    <p class = "raleway">At [Company Name], we believe that understanding the Bible should be accessible to everyone, regardless of their background or level of biblical knowledge. 
+                        That's why we've harnessed the power of advanced AI technology, specifically ChatGPT, to assist users in exploring and deciphering the profound wisdom found in the Scriptures. 
+                        Our mission is to provide a guided and personalized experience, helping individuals and communities engage with the Bible in a deeper, more meaningful way. 
+                        Whether you're seeking clarification on specific passages, exploring themes, or just curious about the Bible's teachings, [Company Name] is here to support your spiritual journey with insights that are both accurate and enlightening. 
+                    </p>
+                </div>
+                
+            </div>
+
+
+        </div>
+        
+    </body>
+
+        </div>
+    </div>
+    <!-- Link to the JavaScript file stored in 'static/js' -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/webStorage.js') }}"></script>
+    
+    <!-- footer -->
+    <footer>
+        <div class = "footer">
+            helloioooooo
+        </div>
+    
+    </footer>
+</body>
+
+</html>

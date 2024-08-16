@@ -1,0 +1,11 @@
+footer {
+    width: 100%;
+    height: 100%; /* Set your desired footer height */
+    background: #E0C9A6;
+    text-align: center;
+    line-height: 10px; /* Center text vertically if needed */
+}
+
+.footer {
+    height: 400px;
+}
