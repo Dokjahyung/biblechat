@@ -26,5 +26,16 @@ def processChatLog():
         return jsonify({'status': 'error', 'message': str(e)}), 400
 
 
+@app.route('/about.html')
+def about():
+    #render about page
+    return render_template('about.html')
+
+@app.route('/donate.html')
+def donate():
+    #render donate page
+    return render_template('donate.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)

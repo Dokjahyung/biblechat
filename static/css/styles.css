@@ -9,6 +9,11 @@ body {
     height: 100vh;
     margin: 0;
 }
+.default-body{
+    font-family: Arial, sans-serif;
+    background-color: white;
+    height: 100vh;
+}
 
 .big-container {
     min-height: 120vh;
@@ -25,7 +30,7 @@ body {
     /*z-index: 1000;*/
 }
 
-.menu-btn {
+button {
     cursor: pointer;
     background-color: #343a40;
     border: none;
@@ -33,6 +38,23 @@ body {
     font-size: 25px;
     transition: width 0.3s, background-color 0.3s;
     width: 50%;
+    border-radius: 10px;
+    /*text-align: center;*/
+}
+
+button:hover {
+    background-color: #E0C9A6;
+}
+
+
+.menu-btn {
+    cursor: pointer;
+    background-color: #343a40;
+    border: none;
+    color: white;
+    font-size: 25px;
+    transition: width 0.3s, background-color 0.3s;
+    width: 75%;
     border-radius: 10px;
     /*text-align: center;*/
 }
@@ -66,7 +88,7 @@ body {
 
 .menu a:hover {
     background-color: #E0C9A6;
-    font-size: 100%;
+    font-size: 80%;
     border-radius: 15px;
     color: white;
 }
@@ -78,8 +100,6 @@ body {
     float: right;
     width: 100%;
     height: 90vh;
-    margin-right: 1%;
-    margin-top: 1%;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -200,6 +220,10 @@ body {
     border-radius: 25px;
     cursor: pointer;
 }
+#send-btn{
+    width: 10%;
+    font-size: medium;
+}
 
 .chat-input button:hover {
     background-color: #343a40;
@@ -219,3 +243,32 @@ body {
     text-overflow: ellipsis;
 }
 
+.video-mask{
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+video {
+    width: 25%; /* Adjust to your desired width */
+    height: auto; /* Keeps the aspect ratio */
+    display: block; /* Removes any inline gaps */
+    outline: none; /* Removes focus outline */
+    -webkit-appearance: none; /* Removes controls on iOS */
+    pointer-events: none;
+  }
+
+  video::-webkit-media-controls {
+    display: none !important; /* Hides the controls on WebKit browsers */
+  }
+
+  video::-moz-media-controls {
+    display: none !important; /* Hides the controls on Firefox */
+  }
+
+  video::-ms-media-controls {
+    display: none !important; /* Hides the controls on IE/Edge */
+  }
+
+  video::media-controls {
+    display: none !important; /* General catch-all to hide controls */
+  }
