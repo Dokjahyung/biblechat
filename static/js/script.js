@@ -145,3 +145,8 @@ function closeMenu() {
     menu.style.display = 'none';
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const video = document.getElementById('myVideo');
+    video.controls = false;
+  });
+
